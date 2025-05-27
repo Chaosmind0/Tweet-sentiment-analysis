@@ -1,0 +1,8 @@
+flake8
+pylint
+black
+mypy
+isort
+bandit
+coverage
+pytest
