@@ -6,10 +6,10 @@ from transformers import (
     BertForSequenceClassification,
     DistilBertTokenizer,
     DistilBertForSequenceClassification,
-    AdamW
 )
 from sklearn.metrics import accuracy_score, f1_score
 from tqdm import tqdm
+from torch.optim import AdamW
 
 
 class SentimentDataset(Dataset):
