@@ -22,4 +22,3 @@ torch==2.6.0
 tqdm==4.67.1
 transformers==4.49.0
 urllib3_secure_extra==0.1.0
-xmlrpclib==1.0.1
