@@ -5,7 +5,7 @@ import numpy as np
 
 class TextVectorizer:
     # Constructor
-    def __init__(self, method="tfidf"):
+    def __init__(self, method="tfidf") -> None:
         self.method = method.lower()    # Convert to lowercase for consistency
         self.vectorizer = None          # Vectorizer object
         self.tokenizer = None           # BERT tokenizer object
@@ -24,21 +24,21 @@ class TextVectorizer:
             raise ValueError(f"Unsupported method: {self.method}")
 
     # fit_transform and transform methods are the same for all vectorizers
-    def fit_transform(self, texts):
+    def fit_transform(self, texts) -> np.ndarray:
         if self.method in ["count", "tfidf"]:
             return self.vectorizer.fit_transform(texts)
         elif self.method == "bert":
             return self._bert_encode(texts)
 
     # transform method is the same for all vectorizers
-    def transform(self, texts):
+    def transform(self, texts) -> np.ndarray:
         if self.method in ["count", "tfidf"]:
             return self.vectorizer.transform(texts)
         elif self.method == "bert":
             return self._bert_encode(texts)
 
     # _bert_encode method is specific to BERT vectorizer
-    def _bert_encode(self, texts):
+    def _bert_encode(self, texts) -> np.ndarray:
         embeddings = []
         with torch.no_grad():
             for text in texts:
