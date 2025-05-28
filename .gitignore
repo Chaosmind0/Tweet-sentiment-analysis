@@ -175,3 +175,4 @@ cython_debug/
 
 # dataset
 data/training.1600000.processed.noemoticon.csv
+data/sentiment140_split.json

@@ -6,3 +6,7 @@ isort
 bandit
 coverage
 pytest
+tqdm
+kagglehub
+shutil
+os
