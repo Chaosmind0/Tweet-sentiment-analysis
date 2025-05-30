@@ -36,6 +36,9 @@ def JSON_transform(ignore_rate: float) -> None:
     print("Cleaning text...")
     df["text"] = df["text"].apply(clean_text)
 
+    # shuffle the dataset before splitting
+    df = df.sample(frac=1, random_state=42).reset_index(drop=True)
+
     # split data
     total = len(df) * (1 - ignore_rate)
     train_end = int(total * 0.6)
