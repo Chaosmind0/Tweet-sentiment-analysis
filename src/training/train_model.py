@@ -40,7 +40,7 @@ class SentimentDataset(Dataset):
 def train_model(
     train_texts, train_labels,
     val_texts, val_labels,
-    model_name="bert", epochs=3, batch_size=16, learning_rate=2e-5,
+    model_name="bert", epochs=8, batch_size=16, learning_rate=2e-5,
     save_dir="models/bert"
 ):
     assert model_name in ["bert", "distilbert"], "Only 'bert' or 'distilbert' supported"
