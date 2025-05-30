@@ -6,7 +6,7 @@ with open("data/sentiment140_split.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
 # label conversion function
-label_map = {0: 0, 2: 1, 4: 2}
+label_map = {0: 0, 4: 1}
 
 def convert_label(label):
     return label_map[int(label)]

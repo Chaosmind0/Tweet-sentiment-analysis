@@ -65,5 +65,5 @@ def JSON_transform(ignore_rate: float) -> None:
     print("Converted & cleaned JSON saved to: data/sentiment140_split.json")
 
 if __name__ == "__main__":
-    ignore_rate = 0.99   # ignore 99% of data for dataset size reduction
+    ignore_rate = 0.90   # ignore 90% of data for dataset size reduction
     JSON_transform(ignore_rate)
