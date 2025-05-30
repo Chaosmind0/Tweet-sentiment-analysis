@@ -26,7 +26,7 @@ def clean_text(text: str) -> str:
     return " ".join(tokens)
 
 
-def JSON_transform() -> None:
+def JSON_transform(ignore_rate: float) -> None:
     # read CSV file
     df = pd.read_csv("data/training.1600000.processed.noemoticon.csv", encoding="latin-1", header=None)
     df.columns = ["target", "ids", "date", "flag", "user", "text"]
@@ -37,13 +37,13 @@ def JSON_transform() -> None:
     df["text"] = df["text"].apply(clean_text)
 
     # split data
-    total = len(df)
+    total = len(df) * (1 - ignore_rate)
     train_end = int(total * 0.6)
     val_end = int(total * 0.8)
 
     train_df = df.iloc[:train_end].copy()
     val_df = df.iloc[train_end:val_end].copy()
-    test_df = df.iloc[val_end:].copy()
+    test_df = df.iloc[val_end:int(total)-1].copy()
 
     # clean text in training set
     print("Cleaning text in training set...")
@@ -62,4 +62,5 @@ def JSON_transform() -> None:
     print("Converted & cleaned JSON saved to: data/sentiment140_split.json")
 
 if __name__ == "__main__":
-    JSON_transform()
+    ignore_rate = 0.99   # ignore 99% of data for dataset size reduction
+    JSON_transform(ignore_rate)
