@@ -32,10 +32,6 @@ def JSON_transform(ignore_rate: float) -> None:
     df.columns = ["target", "ids", "date", "flag", "user", "text"]
     df = df[["target", "text"]]
 
-    # clean text
-    print("Cleaning text...")
-    df["text"] = df["text"].apply(clean_text)
-
     # shuffle the dataset before splitting
     df = df.sample(frac=1, random_state=42).reset_index(drop=True)
 
