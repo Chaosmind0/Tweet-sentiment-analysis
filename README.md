@@ -27,14 +27,23 @@ The model was evaluated on a test set of **31,999 tweets**. The following metric
 
 ### 🔹 Confusion Matrix
 
-![Confusion Matrix]
-
 - **True Negative (TN)**: 13,201
 - **False Positive (FP)**: 2,834
 - **False Negative (FN)**: 3,014
 - **True Positive (TP)**: 12,950
 
 The confusion matrix shows balanced performance with similar error rates across both classes.
+
+## Model Defects and Improvement Plan
+
+- **Model Defects**: The model is not perfect and may have some issues with class imbalance.
+- **Defects**: 
+  - This model may not be suitable for Judging neutral statements, as it is trained on a binary sentiment classification task (dataset does not include neutral statements).
+  - The model may not be suitable for long texts, as it is limited to a maximum input length of 128 tokens.
+- **Improvement Plan**: To improve the model's performance, we can try the following:
+  - Collect more data, including neutral statements.
+  - Use a different pre-trained model with a larger dataset, such as RoBERTa.
+  - Use a different fine-tuning strategy, such as transfer learning or distillation.
 
 ## Usage
 
