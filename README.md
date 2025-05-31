@@ -27,7 +27,7 @@ The model was evaluated on a test set of **31,999 tweets**. The following metric
 
 ### 🔹 Confusion Matrix
 
-![Confusion Matrix](./confusion_matrix.png)
+![Confusion Matrix]
 
 - **True Negative (TN)**: 13,201
 - **False Positive (FP)**: 2,834
