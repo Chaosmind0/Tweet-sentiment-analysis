@@ -8,7 +8,7 @@ from sklearn.metrics import classification_report, confusion_matrix, ConfusionMa
 from transformers import BertTokenizer, BertForSequenceClassification
 from tqdm import tqdm
 
-def evaluate_model(model_dir, data_path, report_dir, test_data):
+def evaluate_model(model_dir : str, data_path : str, report_dir : str, test_data : str):
     # Routes configuration
     MODEL_DIR = model_dir
     DATA_PATH = data_path
@@ -69,7 +69,7 @@ def evaluate_model(model_dir, data_path, report_dir, test_data):
     })
     df.to_csv(os.path.join(REPORT_DIR, "predictions.csv"), index=False)
 
-    print("Evaluation results saved to report/")
+    print("Evaluation results saved to " + REPORT_DIR)
 
 if __name__ == "__main__":
     evaluate_model("models/bert", "data/sentiment140_split.json", "report/val", "val")
