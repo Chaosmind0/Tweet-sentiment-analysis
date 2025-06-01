@@ -174,8 +174,7 @@ cython_debug/
 .pypirc
 
 # dataset
-data/training.1600000.processed.noemoticon.csv
-data/sentiment140_split.json
+data/
 
 # ignore all files in the models folder
 models/

@@ -13,16 +13,16 @@ from torch.optim import AdamW
 
 
 class SentimentDataset(Dataset):
-    def __init__(self, texts, labels, tokenizer, max_length=128):
+    def __init__(self, texts: list, labels: list, tokenizer: BertTokenizer, max_length: int = 128) -> None:
         self.texts = texts
         self.labels = labels
         self.tokenizer = tokenizer
         self.max_length = max_length
 
-    def __len__(self):
+    def __len__(self) -> int:
         return len(self.texts)
 
-    def __getitem__(self, idx):
+    def __getitem__(self, idx: int) -> dict:
         encoding = self.tokenizer(
             self.texts[idx],
             truncation=True,
@@ -38,11 +38,11 @@ class SentimentDataset(Dataset):
 
 
 def train_model(
-    train_texts, train_labels,
-    val_texts, val_labels,
-    model_name="bert", epochs=8, batch_size=16, learning_rate=2e-5,
-    save_dir="models/bert"
-):
+    train_texts: list, train_labels: list,
+    val_texts: list, val_labels: list,
+    model_name: str ="bert", epochs: int =8, batch_size: int =16, learning_rate: float =2e-5,
+    save_dir: str ="models/bert"
+) -> BertForSequenceClassification:
     assert model_name in ["bert", "distilbert"], "Only 'bert' or 'distilbert' supported"
     os.makedirs(save_dir, exist_ok=True)
 

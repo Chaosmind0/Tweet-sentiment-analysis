@@ -14,7 +14,7 @@ def setup_kaggle_api_key() -> None:
     else:
         print("kaggle API key already configured.")
 
-def move_files_to_data_folder(src_path) -> None:
+def move_files_to_data_folder(src_path: str) -> None:
     os.makedirs("data", exist_ok=True)
     for file in os.listdir(src_path):
         full_src = os.path.join(src_path, file)
