@@ -35,6 +35,7 @@ src/
     ├── evaluate_model.py
     ├── run_training.py
     └── train_model.py
+```
 
 ## Source of the dataset
 
