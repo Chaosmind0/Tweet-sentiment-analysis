@@ -8,7 +8,7 @@ from sklearn.metrics import classification_report, confusion_matrix, ConfusionMa
 from transformers import BertTokenizer, BertForSequenceClassification
 from tqdm import tqdm
 
-def evaluate_model(model_dir : str, data_path : str, report_dir : str, test_data : str):
+def evaluate_model(model_dir : str, data_path : str, report_dir : str, test_data : str) -> None:
     # Routes configuration
     MODEL_DIR = model_dir
     DATA_PATH = data_path
