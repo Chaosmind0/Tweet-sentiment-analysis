@@ -45,7 +45,7 @@ https://www.kaggle.com/datasets/kazanova/sentiment140
 
 The core of this project is a pre-trained and fine-tuned DistilBERT model available on Hugging Face:
 
-**[Model on Hugging Face](https://huggingface.co/Charles1954/Tweet-sentiment-analysis)**
+**[Model on Hugging Face]([https://huggingface.co/Charles1954/Tweet-sentiment-analysis](https://huggingface.co/Charles1954/Tweet-sentiment-analysis/tree/main))**
 
 - Architecture: `distilbert-base-uncased`
 - Task: Binary sentiment classification (positive / negative)
