@@ -52,26 +52,31 @@ The core of this project is a pre-trained and fine-tuned DistilBERT model availa
 
 ## Evaluation
 
-The model was evaluated on a test set of **31,999 tweets**. The following metrics summarize its performance:
+The model was evaluated on a test set of **95,999 tweets**. The following metrics summarize its performance:
 
 ### Classification Report
 
 | Class     | Precision | Recall | F1-score | Support |
 |-----------|-----------|--------|----------|---------|
-| Negative  | 0.81      | 0.82   | 0.82     | 16035   |
-| Positive  | 0.82      | 0.81   | 0.82     | 15964   |
-| **Accuracy** | -       | -      | **0.82** | 31999   |
+| Negative  | 0.82      | 0.80   | 0.81     | 47,835  |
+| Positive  | 0.80      | 0.82   | 0.81     | 48,164  |
+| **Accuracy** | –         | –      | **0.81** | 95,999  |
 
-> Macro avg F1-score: **0.82**
+- **Macro avg F1-score:** 0.81  
+- **Weighted avg F1-score:** 0.81
+
+This indicates that the model performs consistently across both classes, achieving strong balance between precision and recall.
 
 ### Confusion Matrix
 
-- **True Negative (TN)**: 13,201
-- **False Positive (FP)**: 2,834
-- **False Negative (FN)**: 3,014
-- **True Positive (TP)**: 12,950
+The confusion matrix shows that the model maintains relatively balanced error rates between classes.
 
-The confusion matrix shows balanced performance with similar error rates across both classes.
+|               | Predicted Negative | Predicted Positive |
+|---------------|--------------------|--------------------|
+| **True Negative**  | 38,252               | 9,583                |
+| **True Positive**  | 8,626                | 39,538               |
+
+![confusion_matrix](https://github.com/user-attachments/assets/9fb1cd6a-285c-4168-ba3f-61f06a34ecfd)
 
 ## Model Defects and Improvement Plan
 
