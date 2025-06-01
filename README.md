@@ -71,11 +71,6 @@ This indicates that the model performs consistently across both classes, achievi
 
 The confusion matrix shows that the model maintains relatively balanced error rates between classes.
 
-|               | Predicted Negative | Predicted Positive |
-|---------------|--------------------|--------------------|
-| **True Negative**  | 38,252               | 9,583                |
-| **True Positive**  | 8,626                | 39,538               |
-
 ![confusion_matrix](https://github.com/user-attachments/assets/9fb1cd6a-285c-4168-ba3f-61f06a34ecfd)
 
 ## Model Defects and Improvement Plan
