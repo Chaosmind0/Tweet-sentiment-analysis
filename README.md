@@ -2,6 +2,10 @@
 
 This project performs **sentiment classification on tweets**, identifying whether a tweet expresses a **positive** or **negative** sentiment. It leverages a fine-tuned transformer-based model hosted on Hugging Face, and demonstrates solid performance on real-world test data.
 
+## Source of the dataset
+
+https://www.kaggle.com/datasets/kazanova/sentiment140
+
 ## Model
 
 The core of this project is a pre-trained and fine-tuned DistilBERT model available on Hugging Face:
@@ -25,7 +29,7 @@ The model was evaluated on a test set of **31,999 tweets**. The following metric
 
 > Macro avg F1-score: **0.82**
 
-### 🔹 Confusion Matrix
+### Confusion Matrix
 
 - **True Negative (TN)**: 13,201
 - **False Positive (FP)**: 2,834
