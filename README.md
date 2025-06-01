@@ -2,6 +2,40 @@
 
 This project performs **sentiment classification on tweets**, identifying whether a tweet expresses a **positive** or **negative** sentiment. It leverages a fine-tuned transformer-based model hosted on Hugging Face, and demonstrates solid performance on real-world test data.
 
+## The complete path
+
+data/
+├── sentiment140_split.json
+└── training.1600000.processed.noemoticon.csv
+
+models/
+└── bert/
+    ├── config.json
+    ├── model.safetensors
+    ├── special_tokens_map.json
+    ├── tokenizer_config.json
+    └── vocab.txt
+
+report/
+├── test/
+│   ├── classification_report.txt
+│   ├── confusion_matrix.png
+│   └── predictions.csv
+└── val/
+    ├── classification_report.txt
+    ├── confusion_matrix.png
+    └── predictions.csv
+
+src/
+├── data_acquisition/
+│   └── download_dataset.py
+├── preprocessing/
+│   └── json_transform.py
+└── training/
+    ├── evaluate_model.py
+    ├── run_training.py
+    └── train_model.py
+
 ## Source of the dataset
 
 https://www.kaggle.com/datasets/kazanova/sentiment140
