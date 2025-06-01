@@ -29,12 +29,15 @@ report/
 src/
 ├── data_acquisition/
 │   └── download_dataset.py
+├── model_download/
+│   └── download_model.py
 ├── preprocessing/
 │   └── json_transform.py
-└── training/
-    ├── evaluate_model.py
-    ├── run_training.py
-    └── train_model.py
+├── training/
+│   ├── evaluate_model.py
+│   ├── run_training.py
+│   └── train_model.py
+└── infer.py
 ```
 
 ## Source of the dataset
