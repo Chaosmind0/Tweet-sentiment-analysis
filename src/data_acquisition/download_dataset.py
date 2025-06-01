@@ -7,6 +7,7 @@ def setup_kaggle_api_key() -> None:
     dst_dir = os.path.expanduser("~/.kaggle")
     dst = os.path.join(dst_dir, "kaggle.json")
 
+    # check if kaggle.json exists and move it to ~/.kaggle/
     if os.path.exists(src) and not os.path.exists(dst):
         os.makedirs(dst_dir, exist_ok=True)
         shutil.copy(src, dst)
@@ -15,6 +16,7 @@ def setup_kaggle_api_key() -> None:
         print("kaggle API key already configured.")
 
 def move_files_to_data_folder(src_path: str) -> None:
+    # move files to data folder
     os.makedirs("data", exist_ok=True)
     for file in os.listdir(src_path):
         full_src = os.path.join(src_path, file)
@@ -24,6 +26,7 @@ def move_files_to_data_folder(src_path: str) -> None:
     print("Files moved to ./data/")
 
 def download_dataset() -> None:
+    # download dataset
     print("Downloading Sentiment140...")
     path = kagglehub.dataset_download("kazanova/sentiment140")
     print("Dataset downloaded to:", path)
