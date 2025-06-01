@@ -3,7 +3,7 @@
 This project performs **sentiment classification on tweets**, identifying whether a tweet expresses a **positive** or **negative** sentiment. It leverages a fine-tuned transformer-based model hosted on Hugging Face, and demonstrates solid performance on real-world test data.
 
 ## The complete path
-
+```
 data/
 ├── sentiment140_split.json
 └── training.1600000.processed.noemoticon.csv
