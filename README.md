@@ -4,40 +4,40 @@ This project performs **sentiment classification on tweets**, identifying whethe
 
 ## The complete path
 ```
-data/
-├── sentiment140_split.json
-└── training.1600000.processed.noemoticon.csv
+data/                                            
+├── sentiment140_split.json                      # cleaned dataset
+└── training.1600000.processed.noemoticon.csv    # dataset
 
-models/
-└── bert/
+models/                                         
+└── bert/                                        # model folder
     ├── config.json
     ├── model.safetensors
     ├── special_tokens_map.json
     ├── tokenizer_config.json
     └── vocab.txt
 
-report/
-├── test/
-│   ├── classification_report.txt
-│   ├── confusion_matrix.png
-│   └── predictions.csv
-└── val/
-    ├── classification_report.txt
-    ├── confusion_matrix.png
-    └── predictions.csv
+report/                                          
+├── test/                                       
+│   ├── classification_report.txt                # classification report
+│   ├── confusion_matrix.png                     # picture of confusion matrix
+│   └── predictions.csv                          # predictions
+└── val/                                         
+    ├── classification_report.txt                # classification report
+    ├── confusion_matrix.png                     # picture of confusion matrix
+    └── predictions.csv                          # predictions
 
 src/
 ├── data_acquisition/
-│   └── download_dataset.py
+│   └── download_dataset.py                      # The script for downloading data
 ├── model_download/
-│   └── download_model.py
+│   └── download_model.py                        # The script for downloading model
 ├── preprocessing/
-│   └── json_transform.py
+│   └── json_transform.py                        # The script for preprocessing dataset
 ├── training/
-│   ├── evaluate_model.py
-│   ├── run_training.py
-│   └── train_model.py
-└── infer.py
+│   ├── evaluate_model.py                        # The script for evaluating model using the trained model
+│   ├── run_training.py                          # The script for runing train_model script
+│   └── train_model.py                           # The script for training model
+└── infer.py                                     # The script as an example about how to use this model
 ```
 
 ## Source of the dataset
